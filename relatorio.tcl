@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 puts " === HIERARQUIA DO DESIGN ==="
 
 package require Tk
@@ -29,4 +30,11 @@ set idFlipflop_D [.tree insert {} end -text "flipflop_D"]
 .tree item $idSomador -open true
 .tree item $idContador -open true
 .tree item $idFlipflop_D -open true
+=======
+puts " === RELATÓRIO DE CÉLULAS === "
+puts "AND2: 11 instâncias"
+puts "XOR2: 12 instâncias"
+puts "flipflop_D: 4 instâncias"
+puts "TOTAL: 27 instâncias"
+>>>>>>> c971812f46770bb23bc72be7406151c93679efc3
 
