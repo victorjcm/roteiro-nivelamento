@@ -1,5 +1,4 @@
 # TAREFA 1
-
 set arquivo "contador_netlist.tcl" ; #inicia o arquivo
 set f [open $arquivo r]
 
@@ -13,7 +12,7 @@ while {[gets $f linha] != -1} {
 	set linha [string trim $linha]
 
 	#busca por padrões, regex retorna 1 se encontrar e 0 se nao
-	if {[regexp {^AND2\S+} $linha]} { incr and2}
+	if {[regexp {^AND2\s+} $linha]} { incr and2}
 	if {[regexp {^XOR2\s+} $linha]} { incr xor2 }
 	if {[regexp {^flipflop_D\s+} $linha]} { incr ff }
 }
