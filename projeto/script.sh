@@ -70,28 +70,26 @@ else
     #Funciona se o tipo não estiver presente 
    echo "Nenhum arquivo encontrado no diretório atual."
 fi
-if ls *.tcl *do >/dev/null 2>&1; then
+if ls *.tcl >/dev/null 2>&1 || ls *.do >/dev/null 2>&1; then
 
-    #  Criar diretório apenas se necessário 
     if [ ! -d "scripts" ]; then
         mkdir scripts
         echo "Pasta 'scripts/' criada."
     fi
 
-    # Loop para mover arquivo por arquivo
     for arquivo in *.tcl *.do; do
-        #  Verifica se o arquivo já existe no destino 
+        [ -e "$arquivo" ] || continue
+
         if [ -e "scripts/$arquivo" ]; then
-            echo "Aviso: '$arquivo' já existe em 'scripts/'. Pulando para não sobrescrever."
+            echo "Aviso: '$arquivo' já existe em 'scripts/'. Pulando."
         else
-            #  Mostra o que está sendo movido
             echo "Movendo: $arquivo -> scripts/"
             mv "$arquivo" scripts/
         fi
     done
+
 else
-    #Funciona se o tipo não estiver presente 
-   echo "Nenhum arquivo encontrado no diretório atual."
+    echo "Nenhum arquivo encontrado no diretório atual."
 fi
 if ls *.md >/dev/null 2>&1; then
 
