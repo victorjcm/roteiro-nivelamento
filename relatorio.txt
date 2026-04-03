@@ -1,0 +1,23 @@
+ === RELATÓRIO DE CÉLULAS === 
+AND2: 11 instâncias
+XOR2: 12 instâncias
+flipflop_D: 4 instâncias
+TOTAL: 27 instâncias
+
+
+
+
+
+
+=== HIERARQUIA DO DESIGN ===
+
+somador_4bits
+ └── (apenas células primitivas)
+
+contador_4bits
+ ├── flipflop_D (4 instâncias)
+ │    └── (células primitivas)
+
+flipflop_D
+ └── (módulo primitivo - sem submódulos)
+

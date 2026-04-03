@@ -1,6 +1,7 @@
 # TAREFA 1
-set arquivo "contador_netlist.tcl" ; #inicia o arquivo
+set arquivo "scripts/contador_netlist.tcl" ; #inicia o arquivo
 set f [open $arquivo r]
+
 
 #inicializa contador
 set and2 0
@@ -36,7 +37,7 @@ puts "\n"
 
 
 # TAREFA 2
-set f [open "contador_netlist.tcl" r]
+set f [open $arquivo r]
 
 set current_module ""
 array set hierarchy {}
